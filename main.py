@@ -19,3 +19,14 @@ def toggle_text(*ags, **kws):
     else:
         text.add_class("hidden")
         button.element.innerHTML = "Show Text"
+
+class Test():
+    def __init__(self) -> None:
+        self.counter = 0
+        self.text_element = Element('clicks_class')
+
+    def inc(self, *ags, **kws):
+        self.counter += 1
+        self.text_element.element.innerHTML = f"Count <strong>{self.counter}</strong>"
+
+test_class = Test()
